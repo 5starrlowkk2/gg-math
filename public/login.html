@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Portal | gg math</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="/">gg math</a>
+      <span class="nav-note">Student Portal Access</span>
+      <a class="nav-link" href="/">Home</a>
+    </nav>
+  </header>
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <div class="eyebrow">Student portal</div>
+      <h1>Welcome back</h1>
+      <p class="hint">Enter the shared portal password to continue. No account or sign-up is needed.</p>
+      <form action="/login" method="post">
+        <label for="password">Portal password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+        <button class="button" type="submit">Continue to portal</button>
+      </form>
+      <p class="hint">Access is for people who have been given the portal password.</p>
+      <p class="error" id="login-error" hidden>The password wasn't accepted. Please try again.</p>
+    </section>
+  </main>
+  <script src="/login.js"></script>
+</body>
+</html>

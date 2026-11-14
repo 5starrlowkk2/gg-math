@@ -1,0 +1,184 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Library | gg math</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="/">gg math</a>
+      <span class="nav-note">Game Library</span>
+
+      <form action="/logout" method="post">
+        <button class="button secondary" type="submit">
+          Log out
+        </button>
+      </form>
+    </nav>
+  </header>
+
+  <main class="wrap section">
+
+    <div class="eyebrow">Your gaming destination</div>
+
+    <h1>Game Library</h1>
+
+    <p class="lead">
+      Find your favorite games and play directly inside gg math.
+    </p>
+
+    <!-- SEARCH -->
+    <label for="game-search">Search games</label>
+
+    <input
+      id="game-search"
+      type="search"
+      placeholder="Search games..."
+    >
+
+    <!-- CATEGORY FILTERS -->
+    <div class="game-filters">
+      <button class="button" data-filter="all">All Games</button>
+      <button class="button secondary" data-filter="racing">Racing</button>
+      <button class="button secondary" data-filter="arcade">Arcade</button>
+      <button class="button secondary" data-filter="sports">Sports</button>
+    </div>
+
+    <!-- GAME LIBRARY -->
+    <div class="game-grid" id="game-grid">
+
+      <article class="game-card"
+        data-category="racing"
+        data-search="moto x3m motorcycle racing bike">
+
+        <div class="card-icon">🏍️</div>
+        <h3>Moto X3M</h3>
+        <p>Race through challenging motorcycle courses.</p>
+        <button class="button" data-game="moto">Play Now</button>
+
+      </article>
+
+      <article class="game-card"
+        data-category="arcade"
+        data-search="slope ball runner 3d">
+
+        <div class="card-icon">🔵</div>
+        <h3>Slope</h3>
+        <p>Race down an endless neon track.</p>
+        <button class="button" data-game="slope">Play Now</button>
+
+      </article>
+
+      <article class="game-card"
+        data-category="arcade"
+        data-search="run 3 space platform">
+
+        <div class="card-icon">🚀</div>
+        <h3>Run 3</h3>
+        <p>Explore challenging space tunnels.</p>
+        <button class="button" data-game="run3">Play Now</button>
+
+      </article>
+
+      <article class="game-card"
+        data-category="racing"
+        data-search="drive mad car driving">
+
+        <div class="card-icon">🚗</div>
+        <h3>Drive Mad</h3>
+        <p>Master physics-based driving courses.</p>
+        <button class="button" data-game="driveMad">Play Now</button>
+
+      </article>
+
+      <article class="game-card"
+        data-category="sports"
+        data-search="basketball stars basketball">
+
+        <div class="card-icon">🏀</div>
+        <h3>Basketball Stars</h3>
+        <p>Compete in basketball matches.</p>
+        <button class="button" data-game="basketball">Play Now</button>
+
+      </article>
+
+      <article class="game-card"
+        data-category="arcade"
+        data-search="vex 5 platformer">
+
+        <div class="card-icon">🏃</div>
+       <h3>Vex X3M</h3>
+        <p>Take on challenging platforming levels.</p>
+        <button class="button" data-game="vex5">Play Now</button>
+
+      </article>
+
+      <article class="game-card"
+        data-category="arcade"
+        data-search="snow rider 3d sled">
+
+        <div class="card-icon">❄️</div>
+        <h3>Snow Rider 3D</h3>
+        <p>Race down snowy slopes.</p>
+        <button class="button" data-game="snowRider">Play Now</button>
+
+      </article>
+
+    </div>
+
+    <p id="no-results" hidden>
+      No games found. Try another search.
+    </p>
+
+    <!-- GAME PLAYER -->
+    <section id="game-player" hidden>
+
+      <h2 id="player-title">Game Player</h2>
+
+      <div class="game-player-controls">
+
+        <button
+          class="button"
+          id="fullscreen-game"
+          type="button">
+          Fullscreen
+        </button>
+
+        <button
+          class="button secondary"
+          id="close-game"
+          type="button">
+          Back to Library
+        </button>
+
+      </div>
+
+      <div class="game-frame-container">
+
+        <iframe
+          id="game-frame"
+          title="gg math game player"
+          allow="fullscreen; autoplay"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+    </section>
+
+    <p class="small" style="margin-top:25px">
+      gg math — Your browser gaming destination.
+    </p>
+
+  </main>
+
+  <script src="/games.js"></script>
+
+</body>
+</html>
